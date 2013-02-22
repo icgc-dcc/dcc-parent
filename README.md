@@ -1,4 +1,4 @@
 dcc-parent
 ==========
 
-Parent POM
+ICGC DCC parent POM
