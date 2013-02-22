@@ -1,0 +1,17 @@
+# IDEA files
+.idea
+
+# IntelliJ files
+*.iml
+
+# Eclipse files
+.project
+.classpath
+.settings
+
+# Maven release plugin files
+pom.xml.releaseBackup
+release.properties
+
+# Temporary files
+*~
