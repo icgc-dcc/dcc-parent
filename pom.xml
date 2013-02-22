@@ -12,7 +12,7 @@
   <url>https://github.com/icgc-dcc/dcc-parent.git</url>
 
   <prerequisites>
-    <maven>3.0.4</maven>
+    <maven>${maven.min.version}</maven>
   </prerequisites>
 
   <organization>
@@ -100,7 +100,7 @@
       <url>http://maven.twttr.com/</url>
     </repository>
   </repositories>
-  
+
   <distributionManagement>
     <repository>
       <id>internal-release</id>
@@ -113,7 +113,7 @@
       <url>http://seqwaremaven.oicr.on.ca/artifactory/dcc-snapshot</url>
     </snapshotRepository>
   </distributionManagement>
-  
+
   <dependencyManagement>
     <dependencies>
       <!-- Command line -->
@@ -335,7 +335,7 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-  
+
   <dependencies>
     <!-- Logging -->
     <dependency>
@@ -380,10 +380,10 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  
+
   <build>
     <defaultGoal>install</defaultGoal>
-    
+
     <pluginManagement>
       <plugins>
         <!-- M2E lifecycle -->
@@ -465,8 +465,8 @@
           <version>2.5.1</version>
           <inherited>true</inherited>
           <configuration>
-            <source>1.6</source>
-            <target>1.6</target>
+            <source>${maven.compiler.source}</source>
+            <target>${maven.compiler.target}</target>
           </configuration>
         </plugin>
 
@@ -583,10 +583,10 @@
             <configuration>
               <rules>
                 <requireMavenVersion>
-                  <version>3.0.3</version>
+                  <version>${maven.min.version}</version>
                 </requireMavenVersion>
                 <requireJavaVersion>
-                  <version>1.6</version>
+                  <version>${jdk.min.version}</version>
                 </requireJavaVersion>
               </rules>
             </configuration>
@@ -618,11 +618,19 @@
       </plugin>
     </plugins>
   </build>
-  
+
   <properties>
     <!-- Encoding -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <!-- Java -->
+    <jdk.min.version>1.6</jdk.min.version>
+    
+    <!-- Maven -->
+    <maven.min.version>3.0.3</maven.min.version>
+    <maven.compiler.target>1.6</maven.compiler.target>
+    <maven.compiler.source>1.6</maven.compiler.source>
 
     <!-- Versions - Mongo -->
     <jongo.version>0.3</jongo.version>
@@ -635,7 +643,6 @@
 
     <!-- Versions - Utilities -->
     <jcommander.version>1.30</jcommander.version>
-    <typesafe-config.version>0.4.0</typesafe-config.version>
     <guice.version>3.0</guice.version>
     <guava.version>12.0</guava.version>
     <lombok.version>0.11.6</lombok.version>
@@ -662,5 +669,5 @@
     <fest.version>2.0M8</fest.version>
     <fest-guava.version>1.0</fest-guava.version>
   </properties>
-  
+
 </project>
