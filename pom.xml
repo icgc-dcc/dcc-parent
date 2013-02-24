@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.icgc.dcc</groupId>
@@ -116,223 +117,6 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- Command line -->
-      <dependency>
-        <groupId>com.beust</groupId>
-        <artifactId>jcommander</artifactId>
-        <version>${jcommander.version}</version>
-      </dependency>
-
-      <!-- Mongo -->
-      <dependency>
-        <groupId>org.jongo</groupId>
-        <artifactId>jongo</artifactId>
-        <version>${jongo.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.mongodb</groupId>
-        <artifactId>mongo-hadoop-core</artifactId>
-        <version>${mongo-hadoop.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.mongodb</groupId>
-        <artifactId>mongo-java-driver</artifactId>
-        <version>${mongo.version}</version>
-      </dependency>
-
-      <!-- JSON -->
-      <dependency>
-        <groupId>com.fasterxml.jackson.core</groupId>
-        <artifactId>jackson-core</artifactId>
-        <version>${jackson.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.fasterxml.jackson.core</groupId>
-        <artifactId>jackson-databind</artifactId>
-        <version>${jackson.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.fasterxml.jackson.dataformat</groupId>
-        <artifactId>jackson-dataformat-yaml</artifactId>
-        <version>${jackson-yaml.version}</version>
-      </dependency>
-
-      <!-- Cascading -->
-      <dependency>
-        <groupId>cascading</groupId>
-        <artifactId>cascading-core</artifactId>
-        <version>${cascading.version}</version>
-        <exclusions>
-          <exclusion>
-            <artifactId>slf4j-log4j12</artifactId>
-            <groupId>org.slf4j</groupId>
-          </exclusion>
-          <exclusion>
-            <artifactId>log4j</artifactId>
-            <groupId>log4j</groupId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>cascading</groupId>
-        <artifactId>cascading-local</artifactId>
-        <version>${cascading.version}</version>
-        <exclusions>
-          <exclusion>
-            <artifactId>slf4j-log4j12</artifactId>
-            <groupId>org.slf4j</groupId>
-          </exclusion>
-          <exclusion>
-            <artifactId>log4j</artifactId>
-            <groupId>log4j</groupId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>cascading</groupId>
-        <artifactId>cascading-hadoop</artifactId>
-        <version>${cascading.version}</version>
-        <exclusions>
-          <exclusion>
-            <artifactId>slf4j-log4j12</artifactId>
-            <groupId>org.slf4j</groupId>
-          </exclusion>
-          <exclusion>
-            <artifactId>log4j</artifactId>
-            <groupId>log4j</groupId>
-          </exclusion>
-          <exclusion>
-            <artifactId>commons-logging</artifactId>
-            <groupId>commons-logging</groupId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-
-      <!-- Hadoop -->
-      <dependency>
-        <groupId>org.apache.hadoop</groupId>
-        <artifactId>hadoop-common</artifactId>
-        <version>${hadoop-cdh.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.hadoop</groupId>
-        <artifactId>hadoop-annotations</artifactId>
-        <version>${hadoop-cdh.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.hadoop</groupId>
-        <artifactId>hadoop-core</artifactId>
-        <version>${hadoop-mr1-cdh.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.hadoop</groupId>
-        <artifactId>hadoop-hdfs</artifactId>
-        <version>${hadoop-cdh.version}</version>
-        <scope>runtime</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.hadoop.gplcompression</groupId>
-        <artifactId>hadoop-lzo</artifactId>
-        <version>0.4.16</version>
-      </dependency>
-
-      <!-- Search -->
-      <dependency>
-        <groupId>org.elasticsearch</groupId>
-        <artifactId>elasticsearch</artifactId>
-        <version>${elasticsearch.version}</version>
-      </dependency>
-
-      <!-- Testing - Mongo -->
-      <dependency>
-        <groupId>de.flapdoodle.embed</groupId>
-        <artifactId>de.flapdoodle.embed.mongo</artifactId>
-        <version>1.28</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.wordnik</groupId>
-        <artifactId>mongo-admin-utils-distribution</artifactId>
-        <version>1.2.0</version>
-        <scope>test</scope>
-        <exclusions>
-          <exclusion>
-            <artifactId>slf4j-log4j12</artifactId>
-            <groupId>org.slf4j</groupId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-
-      <!-- Testing - Cascading -->
-      <dependency>
-        <groupId>cascading</groupId>
-        <artifactId>cascading-core</artifactId>
-        <version>${cascading.version}</version>
-        <classifier>tests</classifier>
-        <scope>test</scope>
-        <exclusions>
-          <exclusion>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-          </exclusion>
-          <exclusion>
-            <artifactId>slf4j-log4j12</artifactId>
-            <groupId>org.slf4j</groupId>
-          </exclusion>
-          <exclusion>
-            <artifactId>log4j</artifactId>
-            <groupId>log4j</groupId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-
-      <!-- Testing - Hadoop -->
-      <dependency>
-        <groupId>org.apache.hadoop</groupId>
-        <artifactId>hadoop-test</artifactId>
-        <version>${hadoop-mr1-cdh.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.hadoop</groupId>
-        <artifactId>hadoop-minicluster</artifactId>
-        <version>${hadoop-mr1-cdh.version}</version>
-        <scope>test</scope>
-        <exclusions>
-          <exclusion>
-            <artifactId>slf4j-log4j12</artifactId>
-            <groupId>org.slf4j</groupId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-
-      <!-- Testing - Utilities -->
-      <dependency>
-        <groupId>com.google.code</groupId>
-        <artifactId>externalsortinginjava</artifactId>
-        <version>0.1.1</version>
-        <scope>test</scope>
-      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -433,6 +217,16 @@
         </plugin>
 
         <!-- Generate sources -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>buildnumber-maven-plugin</artifactId>
+          <version>1.2</version>
+        </plugin>
+        <plugin>
+          <groupId>com.mycila.maven-license-plugin</groupId>
+          <artifactId>maven-license-plugin</artifactId>
+          <version>1.9.0</version>
+        </plugin>
         <plugin>
           <groupId>com.mysema.maven</groupId>
           <artifactId>maven-apt-plugin</artifactId>
@@ -569,6 +363,57 @@
       </plugins>
     </pluginManagement>
     <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>buildnumber-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>generate-current-year</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>create-timestamp</goal>
+            </goals>
+            <configuration>
+              <timestampFormat>yyyy</timestampFormat>
+              <timestampPropertyName>license.current.year</timestampPropertyName>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.mycila.maven-license-plugin</groupId>
+        <artifactId>maven-license-plugin</artifactId>
+        <configuration>
+          <header>license/license-header.txt</header>
+          <headerDefinitions>
+            <headerDefinition>license/license-header-definition.xml</headerDefinition>
+          </headerDefinitions>
+          <strictCheck>true</strictCheck>
+          <excludes>
+            <exclude>dcc-parent-resources/**</exclude>
+          </excludes>
+          <properties>
+            <currentYear>${license.current.year}</currentYear>
+            <company>The Ontario Institute for Cancer Research</company>
+          </properties>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>format</goal>
+            </goals>
+          </execution>
+        </executions>
+        <dependencies>
+          <dependency>
+            <groupId>org.icgc.dcc</groupId>
+            <artifactId>dcc-parent-resources</artifactId>
+            <version>1.3-SNAPSHOT</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+
       <!-- Validate -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -626,38 +471,11 @@
 
     <!-- Java -->
     <jdk.min.version>1.6</jdk.min.version>
-    
+
     <!-- Maven -->
     <maven.min.version>3.0.3</maven.min.version>
     <maven.compiler.target>1.6</maven.compiler.target>
     <maven.compiler.source>1.6</maven.compiler.source>
-
-    <!-- Versions - Mongo -->
-    <jongo.version>0.3</jongo.version>
-    <mongo.version>2.10.1</mongo.version>
-    <mongo-hadoop.version>1.1.0-93d3667</mongo-hadoop.version> <!-- See https://groups.google.com/d/topic/cascading-user/YaZUWr3V-sM/discussion -->
-
-    <!-- Versions - JSON -->
-    <jackson.version>2.1.2</jackson.version>
-    <jackson-yaml.version>2.1.3</jackson-yaml.version>
-
-    <!-- Versions - Utilities -->
-    <jcommander.version>1.30</jcommander.version>
-    <guice.version>3.0</guice.version>
-    <guava.version>12.0</guava.version>
-    <lombok.version>0.11.6</lombok.version>
-
-    <!-- Versions - Cascading -->
-    <cascading.version>2.1.1</cascading.version>
-
-    <!-- Versions - Hadoop -->
-    <cdh.version>cdh4.1.2</cdh.version>
-    <hadoop.version>2.0.0</hadoop.version>
-    <hadoop-cdh.version>${hadoop.version}-${cdh.version}</hadoop-cdh.version>
-    <hadoop-mr1-cdh.version>${hadoop.version}-mr1-${cdh.version}</hadoop-mr1-cdh.version>
-
-    <!-- Versions - Search -->
-    <elasticsearch.version>0.20.2</elasticsearch.version>
 
     <!-- Versions - Logging -->
     <slf4j.version>1.6.1</slf4j.version>

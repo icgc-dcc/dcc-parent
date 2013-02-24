@@ -9,6 +9,9 @@
 .classpath
 .settings
 
+# Maven
+target/
+
 # Maven release plugin files
 pom.xml.releaseBackup
 release.properties
