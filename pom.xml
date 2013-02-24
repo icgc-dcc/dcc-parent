@@ -57,11 +57,11 @@
   <repositories>
     <repository>
       <id>internal</id>
-      <url>http://seqwaremaven.oicr.on.ca/artifactory/dcc-dependencies</url>
+      <url>${dcc.repository.url}/dcc-dependencies</url>
     </repository>
     <repository>
       <id>morphia</id>
-      <url> http://morphia.googlecode.com/svn/mavenrepo/</url>
+      <url>http://morphia.googlecode.com/svn/mavenrepo/</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -106,12 +106,12 @@
     <repository>
       <id>internal-release</id>
       <name>wrench.res.oicr.on.ca-releases</name>
-      <url>http://seqwaremaven.oicr.on.ca/artifactory/dcc-release</url>
+      <url>${dcc.repository.url}/dcc-release</url>
     </repository>
     <snapshotRepository>
       <id>internal-snapshot</id>
       <name>wrench.res.oicr.on.ca-snapshots</name>
-      <url>http://seqwaremaven.oicr.on.ca/artifactory/dcc-snapshot</url>
+      <url>${dcc.repository.url}/dcc-snapshot</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -402,13 +402,13 @@
           <includes>
             <include>**/*.java</include>
             <include>**/*.xml</include>
-          </includes>          
+          </includes>
           <excludes>
             <exclude>dcc-parent-resources/**</exclude>
           </excludes>
           <properties>
             <currentYear>${license.current.year}</currentYear>
-            <company>The Ontario Institute for Cancer Research</company>
+            <company>${dcc.company.name}</company>
           </properties>
         </configuration>
         <executions>
@@ -482,6 +482,10 @@
     <!-- Encoding -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <!-- Project -->
+    <dcc.company.name>The Ontario Institute for Cancer Research</dcc.company.name>
+    <dcc.repository.url>http://seqwaremaven.oicr.on.ca/artifactory</dcc.repository.url>
 
     <!-- Java -->
     <jdk.min.version>1.6</jdk.min.version>
