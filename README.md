@@ -30,12 +30,12 @@ maven-compiler-plugin, just set a property.
       <version.compiler.plugin>2.3</version.compiler.plugin>
     </properties>
 
-Or override the default Java compiler source and target level used in the build.  
+Or override the default Java compiler source and target level used in the build.
 Note the default level is 1.6.
 
     <properties>
-      <maven.compiler.target>1.5</maven.compiler.target>
-      <maven.compiler.source>1.5</maven.compiler.source>
+      <maven.compiler.target>1.6</maven.compiler.target>
+      <maven.compiler.source>1.6</maven.compiler.source>
     </properties>
 
 The minimum version of Java or Maven required to run a build can also be set via
@@ -43,7 +43,7 @@ properties.
 
     <properties>
       <maven.min.version>3.0.3</maven.min.version>
-      <jdk.min.version>1.7</jdk.min.version>
+      <jdk.min.version>1.6</jdk.min.version>
     </properties>
 
 For the full list of properties, refer to the POM itself.
