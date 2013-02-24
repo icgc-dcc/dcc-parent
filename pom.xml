@@ -279,6 +279,7 @@
           </configuration>
         </plugin>
 
+        <!--Package -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
@@ -398,6 +399,10 @@
             <headerDefinition>license/license-header-definition.xml</headerDefinition>
           </headerDefinitions>
           <strictCheck>true</strictCheck>
+          <includes>
+            <include>**/*.java</include>
+            <include>**/*.xml</include>
+          </includes>          
           <excludes>
             <exclude>dcc-parent-resources/**</exclude>
           </excludes>
