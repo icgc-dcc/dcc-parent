@@ -1,4 +1,4 @@
-ICGC DCC Parent POM
+ICGC DCC - Parent POM
 =================
 The parent Maven POM for ICGC DCC.
 
