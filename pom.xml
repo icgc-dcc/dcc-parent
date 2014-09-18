@@ -991,9 +991,6 @@
                   <regex>Java\(TM\) SE Runtime Environment</regex>
                   <regexMessage>Java Vendor must be Sun/Oracle.</regexMessage>
                 </requireProperty>
-                <requirePluginVersions>
-                  <message>Best Practice is to always define plugin versions!</message>
-                </requirePluginVersions>
               </rules>
             </configuration>
           </execution>
