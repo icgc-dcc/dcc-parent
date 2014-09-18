@@ -55,10 +55,30 @@
   </developers>
 
   <repositories>
+    <!-- DCC -->
     <repository>
-      <id>internal</id>
+      <id>dcc-dependencies</id>
       <url>http://seqwaremaven.oicr.on.ca/artifactory/dcc-dependencies</url>
     </repository>
+
+    <!-- Spring -->
+    <repository>
+      <id>spring-milestones</id>
+      <name>Spring Milestones</name>
+      <url>http://repo.spring.io/milestone</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>spring-snapshots</id>
+      <name>Spring Snapshots</name>
+      <url>http://repo.spring.io/snapshot</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+
     <repository>
       <id>morphia</id>
       <url> http://morphia.googlecode.com/svn/mavenrepo/</url>
@@ -117,10 +137,27 @@
       <id>externalsortinginjava.googlecode.com</id>
       <url>http://externalsortinginjava.googlecode.com/svn/m2/releases</url>
     </repository>
+    <repository>
+      <id>keyczar-public</id>
+      <name>Keyczar</name>
+      <url>http://keyczar.googlecode.com/svn/trunk/java/maven/</url>
+    </repository>
 
   </repositories>
 
   <pluginRepositories>
+
+    <!-- Spring -->
+    <pluginRepository>
+      <id>spring-snapshots</id>
+      <name>Spring Snapshots</name>
+      <url>http://repo.spring.io/snapshot</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+
+    <!-- Apache -->
     <pluginRepository>
       <id>apache-snapshots</id>
       <name>Apache Snapshot Repository</name>
@@ -136,12 +173,12 @@
 
   <distributionManagement>
     <repository>
-      <id>internal-release</id>
+      <id>dcc-release</id>
       <name>wrench.res.oicr.on.ca-releases</name>
       <url>http://seqwaremaven.oicr.on.ca/artifactory/dcc-release</url>
     </repository>
     <snapshotRepository>
-      <id>internal-snapshot</id>
+      <id>dcc-snapshot</id>
       <name>wrench.res.oicr.on.ca-snapshots</name>
       <url>http://seqwaremaven.oicr.on.ca/artifactory/dcc-snapshot</url>
     </snapshotRepository>
