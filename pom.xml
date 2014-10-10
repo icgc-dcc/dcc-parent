@@ -697,15 +697,15 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.easytesting</groupId>
-      <artifactId>fest-assert-core</artifactId>
-      <version>${fest.version}</version>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>${assertj-core.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.easytesting</groupId>
-      <artifactId>fest-guava-assert</artifactId>
-      <version>${fest-guava.version}</version>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-guava</artifactId>
+      <version>${assertj-guava.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -1216,8 +1216,8 @@
     <junit.version>4.10</junit.version>
     <mockito.version>1.9.5</mockito.version>
     <powermock.version>1.5.1</powermock.version>
-    <fest.version>2.0M10</fest.version>
-    <fest-guava.version>1.0</fest-guava.version>
+    <assertj-core.version>1.7.0</assertj-core.version>
+    <assertj-guava.version>1.2.0</assertj-guava.version>
     <embed-mongo.version>1.45</embed-mongo.version>
 
     <!-- Versions - Resources -->
