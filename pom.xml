@@ -225,7 +225,7 @@
 
       <!-- JDBC -->
       <dependency>
-        <groupId>postgresql</groupId>
+        <groupId>org.postgresql</groupId>
         <artifactId>postgresql</artifactId>
         <version>${postgresql.version}</version>
       </dependency>
@@ -1190,7 +1190,7 @@
     <dropwizard.version>0.6.2</dropwizard.version>
 
     <!-- Versions - JDBC -->
-    <postgresql.version>9.2-1004.jdbc4</postgresql.version>
+    <postgresql.version>9.2-1004-jdbc4</postgresql.version>
 
     <!-- Versions - Mongo -->
     <mongo.version>2.11.4</mongo.version>
