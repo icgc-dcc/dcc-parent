@@ -197,11 +197,6 @@
         <artifactId>dcc-cghub</artifactId>
         <version>${dcc-cghub.version}</version>
       </dependency>
-      <dependency>
-        <groupId>${project.groupId}</groupId>
-        <artifactId>dcc-heliotrope</artifactId>
-        <version>${dcc-heliotrope.version}</version>
-      </dependency>
 
       <!-- Dropwizard -->
       <dependency>
@@ -267,6 +262,11 @@
         <groupId>com.fasterxml.jackson.dataformat</groupId>
         <artifactId>jackson-dataformat-yaml</artifactId>
         <version>${jackson-yaml.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-csv</artifactId>
+        <version>${jackson-csv.version}</version>
       </dependency>
 
       <!-- Utilities -->
@@ -1195,12 +1195,13 @@
     <!-- Versions - Mongo -->
     <mongo.version>2.11.4</mongo.version>
     <mongo-hadoop.version>1.1.0-93d3667</mongo-hadoop.version> <!-- See https://groups.google.com/d/topic/cascading-user/YaZUWr3V-sM/discussion -->
-    <jongo.version>1.1-early-20140221-1732</jongo.version>
+    <jongo.version>1.1</jongo.version>
 
     <!-- Versions - JSON -->
     <jackson.version>2.3.0</jackson.version>
     <jackson-smile.version>2.3.0</jackson-smile.version>
     <jackson-yaml.version>2.3.0</jackson-yaml.version>
+    <jackson-csv.version>2.3.0</jackson-csv.version>
 
     <!-- Versions - Utilities -->
     <lombok.version>1.12.6</lombok.version>
@@ -1248,7 +1249,6 @@
     <!-- Versions - Resources -->
     <dcc-resources.version>0.9a</dcc-resources.version>
     <dcc-cghub.version>4</dcc-cghub.version>
-    <dcc-heliotrope.version>9</dcc-heliotrope.version>
 
     <!-- PMD -->
     <pmd.sourcedir>${basedir}/src/main/pmd</pmd.sourcedir>
