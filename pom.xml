@@ -1198,10 +1198,10 @@
     <jongo.version>1.1</jongo.version>
 
     <!-- Versions - JSON -->
-    <jackson.version>2.3.0</jackson.version>
-    <jackson-smile.version>2.3.0</jackson-smile.version>
-    <jackson-yaml.version>2.3.0</jackson-yaml.version>
-    <jackson-csv.version>2.3.0</jackson-csv.version>
+    <jackson.version>2.3.4</jackson.version>
+    <jackson-smile.version>2.3.4</jackson-smile.version>
+    <jackson-yaml.version>2.3.4</jackson-yaml.version>
+    <jackson-csv.version>2.3.4</jackson-csv.version>
 
     <!-- Versions - Utilities -->
     <lombok.version>1.12.6</lombok.version>
