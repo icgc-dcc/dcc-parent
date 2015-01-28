@@ -975,7 +975,7 @@
           <configuration>
             <skipPmdError>false</skipPmdError>
             <aggregate>true</aggregate>
-            <targetDirectory>${pmd.sourcedir}</targetDirectory>
+            <targetDirectory>${pmd.targetdir}</targetDirectory>
             <outputDirectory>${pmd.targetdir}</outputDirectory>
             <linkXRef>false</linkXRef>
             <sourceEncoding>utf-8</sourceEncoding>
@@ -1252,7 +1252,7 @@
 
     <!-- PMD -->
     <pmd.sourcedir>${basedir}/src/main/pmd</pmd.sourcedir>
-    <pmd.targetdir>${project.build.directory}/pmd</pmd.targetdir>
+    <pmd.targetdir>${project.build.directory}</pmd.targetdir>
   </properties>
 
 </project>
