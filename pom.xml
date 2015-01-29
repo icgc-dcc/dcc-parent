@@ -974,7 +974,7 @@
           <inherited>true</inherited>
           <configuration>
             <skipPmdError>false</skipPmdError>
-            <aggregate>true</aggregate>
+            <aggregate>false</aggregate>
             <targetDirectory>${pmd.targetdir}</targetDirectory>
             <outputDirectory>${pmd.targetdir}</outputDirectory>
             <linkXRef>false</linkXRef>
