@@ -866,8 +866,8 @@
           <version>3.1</version>
           <inherited>true</inherited>
           <configuration>
-            <source>1.6</source>
-            <target>1.6</target>
+            <source>1.8</source>
+            <target>1.8</target>
             <showWarnings>true</showWarnings>
           </configuration>
         </plugin>
@@ -1042,7 +1042,7 @@
                   <version>[3.0.3, 3.2.1]</version>
                 </requireMavenVersion>
                 <requireJavaVersion>
-                  <version>[1.6.0-26, 1.8)</version>
+                  <version>[1.6.0-26, 1.8.0-31]</version>
                 </requireJavaVersion>
                 <requireProperty>
                   <property>java.runtime.name</property>
@@ -1204,7 +1204,7 @@
     <jackson-csv.version>2.3.4</jackson-csv.version>
 
     <!-- Versions - Utilities -->
-    <lombok.version>1.12.6</lombok.version>
+    <lombok.version>1.16.0</lombok.version>
     <jcommander.version>1.35</jcommander.version>
     <typesafe-config.version>1.2.0</typesafe-config.version>
     <guice.version>3.0</guice.version>
@@ -1220,8 +1220,8 @@
     <cascading.version>2.1.6</cascading.version>
 
     <!-- Versions - Hadoop -->
-    <cdh.version>cdh4.1.2</cdh.version>
-    <hadoop.version>2.0.0</hadoop.version>
+    <cdh.version>cdh5.3.0</cdh.version>
+    <hadoop.version>2.5.0</hadoop.version>
     <hadoop-cdh.version>${hadoop.version}-${cdh.version}</hadoop-cdh.version>
     <hadoop-mr1-cdh.version>${hadoop.version}-mr1-${cdh.version}</hadoop-mr1-cdh.version>
 
