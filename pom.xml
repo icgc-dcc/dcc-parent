@@ -4,7 +4,7 @@
 
   <groupId>org.icgc.dcc</groupId>
   <artifactId>dcc-parent</artifactId>
-  <version>11-SNAPSHOT</version>
+  <version>10-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>ICGC DCC Parent POM</name>
@@ -974,7 +974,7 @@
           <inherited>true</inherited>
           <configuration>
             <skipPmdError>false</skipPmdError>
-            <aggregate>true</aggregate>
+            <aggregate>false</aggregate>
             <targetDirectory>${pmd.targetdir}</targetDirectory>
             <outputDirectory>${pmd.targetdir}</outputDirectory>
             <linkXRef>false</linkXRef>
