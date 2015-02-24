@@ -1220,7 +1220,7 @@
     <cascading.version>2.1.6</cascading.version>
 
     <!-- Versions - Hadoop -->
-    <cdh.version>cdh5.3.0</cdh.version>
+    <cdh.version>cdh5.3.1</cdh.version>
     <hadoop.version>2.5.0</hadoop.version>
     <hadoop-cdh.version>${hadoop.version}-${cdh.version}</hadoop-cdh.version>
     <hadoop-mr1-cdh.version>${hadoop.version}-mr1-${cdh.version}</hadoop-mr1-cdh.version>
