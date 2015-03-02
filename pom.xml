@@ -981,7 +981,7 @@
             <sourceEncoding>utf-8</sourceEncoding>
             <targetJdk>1.8</targetJdk>
             <rulesets>
-              <ruleset>${pmd.sourcedir}/config/custom.xml</ruleset>
+              <ruleset>https://seqwaremaven.oicr.on.ca/artifactory/simple/dcc-dependencies/org/icgc/dcc/dcc-pmd/1/dcc-pmd-1-default.xml</ruleset>
             </rulesets>
             <excludeRoots>
               <excludeRoot>${project.build.directory}/generated-sources/java/</excludeRoot>
