@@ -1204,7 +1204,7 @@
     <jackson-csv.version>2.3.4</jackson-csv.version>
 
     <!-- Versions - Utilities -->
-    <lombok.version>1.16.0</lombok.version>
+    <lombok.version>1.16.2</lombok.version>
     <jcommander.version>1.35</jcommander.version>
     <typesafe-config.version>1.2.0</typesafe-config.version>
     <guice.version>3.0</guice.version>
