@@ -1226,7 +1226,7 @@
     <hadoop-mr1-cdh.version>${hadoop.version}-mr1-${cdh.version}</hadoop-mr1-cdh.version>
 
     <!-- Versions - Search -->
-    <elasticsearch.version>0.90.1</elasticsearch.version>
+    <elasticsearch.version>1.4.4</elasticsearch.version>
 
     <!-- Versions - Genomics -->
     <picard.version>1.102.0</picard.version>
