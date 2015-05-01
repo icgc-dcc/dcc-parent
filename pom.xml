@@ -4,7 +4,7 @@
 
   <groupId>org.icgc.dcc</groupId>
   <artifactId>dcc-parent</artifactId>
-  <version>15</version>
+  <version>16-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>ICGC DCC Parent POM</name>
