@@ -11,10 +11,6 @@
   <description>Parent POM for DCC projects. Provides default project build configuration.</description>
   <url>https://github.com/icgc-dcc/dcc-parent.git</url>
 
-  <prerequisites>
-    <maven>${maven.min.version}</maven>
-  </prerequisites>
-
   <organization>
     <name>ICGC DCC</name>
     <url>http://dcc.icgc.org</url>
