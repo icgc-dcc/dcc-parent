@@ -11,10 +11,6 @@
   <description>Parent POM for DCC projects. Provides default project build configuration.</description>
   <url>https://github.com/icgc-dcc/dcc-parent.git</url>
 
-  <prerequisites>
-    <maven>${maven.min.version}</maven>
-  </prerequisites>
-
   <organization>
     <name>ICGC DCC</name>
     <url>http://dcc.icgc.org</url>
@@ -553,7 +549,7 @@
       <dependency>
         <groupId>com.hadoop.gplcompression</groupId>
         <artifactId>hadoop-lzo</artifactId>
-        <version>0.4.16</version>
+        <version>${hadoop-lzo.version}</version>
       </dependency>
 
       <!-- Search -->
@@ -573,7 +569,7 @@
       <dependency>
         <groupId>com.wordnik</groupId>
         <artifactId>mongo-admin-utils-distribution</artifactId>
-        <version>1.2.0</version>
+        <version>${mongo-admin-utils-distribution.version}</version>
         <scope>test</scope>
         <exclusions>
           <exclusion>
@@ -648,7 +644,7 @@
       <dependency>
         <groupId>com.google.code</groupId>
         <artifactId>externalsortinginjava</artifactId>
-        <version>0.1.1</version>
+        <version>${externalsortinginjava.version}</version>
         <scope>test</scope>
       </dependency>
     </dependencies>
@@ -725,7 +721,7 @@
         <plugin>
           <groupId>org.eclipse.m2e</groupId>
           <artifactId>lifecycle-mapping</artifactId>
-          <version>1.0.0</version>
+          <version>${lifecycle-mapping.version}</version>
           <configuration>
             <lifecycleMappingMetadata>
               <pluginExecutions>
@@ -733,7 +729,7 @@
                   <pluginExecutionFilter>
                     <groupId>com.mysema.maven</groupId>
                     <artifactId>apt-maven-plugin</artifactId>
-                    <versionRange>[1.0.6,)</versionRange>
+                    <versionRange>${apt-maven-plugin.versionRange}</versionRange>
                     <goals>
                       <goal>process</goal>
                     </goals>
@@ -746,7 +742,7 @@
                   <pluginExecutionFilter>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
-                    <versionRange>[1.0,)</versionRange>
+                    <versionRange>${build-helper-maven-plugin.versionRange}</versionRange>
                     <goals>
                       <goal>add-source</goal>
                     </goals>
@@ -762,7 +758,7 @@
                   <pluginExecutionFilter>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
-                    <versionRange>[1.0.0,)</versionRange>
+                    <versionRange>${maven-enforcer-plugin.versionRange}</versionRange>
                     <goals>
                       <goal>enforce</goal>
                     </goals>
@@ -775,7 +771,7 @@
                   <pluginExecutionFilter>
                     <groupId>com.cj.jshintmojo</groupId>
                     <artifactId>jshint-maven-plugin</artifactId>
-                    <versionRange>[1.0.0,)</versionRange>
+                    <versionRange>${jshint-maven-plugin.versionRange}</versionRange>
                     <goals>
                       <goal>lint</goal>
                     </goals>
@@ -788,7 +784,7 @@
                   <pluginExecutionFilter>
                     <groupId>org.projectlombok</groupId>
                     <artifactId>lombok-maven-plugin</artifactId>
-                    <versionRange>[0.11.2.0,)</versionRange>
+                    <versionRange>${lombok-maven-plugin.versionRange}</versionRange>
                     <goals>
                       <goal>delombok</goal>
                     </goals>
@@ -805,44 +801,44 @@
         <!-- Core -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>2.5</version>
+          <version>${maven-clean-plugin.version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>2.6</version>
+          <version>${maven-resources-plugin.version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.1</version>
+          <version>${maven-deploy-plugin.version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.1</version>
+          <version>${maven-install-plugin.version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.3</version>
+          <version>${maven-site-plugin.version}</version>
         </plugin>
 
         <!-- Versions -->
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>versions-maven-plugin</artifactId>
-          <version>2.1</version>
+          <version>${versions-maven-plugin.version}</version>
         </plugin>
 
         <!-- Execution -->
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
-          <version>1.2.1</version>
+          <version>${exec-maven-plugin.version}</version>
         </plugin>
 
         <!-- Generate sources -->
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
-          <version>1.8</version>
+          <version>${build-helper-maven-plugin.version}</version>
           <executions>
             <execution>
               <id>add-source</id>
@@ -863,11 +859,11 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.1</version>
+          <version>${maven-compiler-plugin.version}</version>
           <inherited>true</inherited>
           <configuration>
-            <source>1.8</source>
-            <target>1.8</target>
+            <source>${maven-compiler-plugin.source}</source>
+            <target>${maven-compiler-plugin.target}</target>
             <showWarnings>true</showWarnings>
           </configuration>
         </plugin>
@@ -876,7 +872,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.16</version>
+          <version>${maven-surefire-plugin.version}</version>
           <configuration>
             <argLine>-Xms256m -Xmx256m -XX:MaxPermSize=256m</argLine>
             <redirectTestOutputToFile>${test.redirectTestOutputToFile}</redirectTestOutputToFile>
@@ -891,17 +887,17 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>2.4</version>
+          <version>${maven-jar-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>2.4</version>
+          <version>${maven-assembly-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
-          <version>2.2</version>
+          <version>${maven-shade-plugin.version}</version>
           <configuration>
             <filters>
               <filter>
@@ -949,7 +945,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>findbugs-maven-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>${findbugs-maven-plugin.version}</version>
           <configuration>
             <!-- Disabling as this is really slowing down our build times. We should be getting Jenkins to do this! -->
             <skip>${install.skipFindbugs}</skip>
@@ -970,7 +966,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-pmd-plugin</artifactId>
-          <version>3.3</version>
+          <version>${maven-pmd-plugin.version}</version>
           <inherited>true</inherited>
           <configuration>
             <skipPmdError>false</skipPmdError>
@@ -979,7 +975,7 @@
             <outputDirectory>${pmd.targetdir}</outputDirectory>
             <linkXRef>false</linkXRef>
             <sourceEncoding>utf-8</sourceEncoding>
-            <targetJdk>1.8</targetJdk>
+            <targetJdk>${maven-pmd-plugin.targetJdk}</targetJdk>
             <rulesets>
               <ruleset>https://seqwaremaven.oicr.on.ca/artifactory/simple/dcc-dependencies/org/icgc/dcc/dcc-pmd/1/dcc-pmd-1-default.xml</ruleset>
             </rulesets>
@@ -1000,18 +996,18 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>cobertura-maven-plugin</artifactId>
-          <version>2.6</version>
+          <version>${cobertura-maven-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.4.2</version>
+          <version>${maven-release-plugin.version}</version>
         </plugin>
 
         <!-- Source -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <version>2.3</version>
+          <version>${maven-source-plugin.version}</version>
           <artifactId>maven-source-plugin</artifactId>
           <executions>
             <execution>
@@ -1029,7 +1025,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
-        <version>1.3.1</version>
+        <version>${maven-enforcer-plugin.version}</version>
         <executions>
           <execution>
             <id>enforce-versions</id>
@@ -1039,10 +1035,10 @@
             <configuration>
               <rules>
                 <requireMavenVersion>
-                  <version>[3.0.3, 3.2.5]</version>
+                  <version>${maven-enforcer-plugin.requireMavenVersion}</version>
                 </requireMavenVersion>
                 <requireJavaVersion>
-                  <version>[1.6.0-26, 1.9)</version>
+                  <version>${maven-enforcer-plugin.requireJavaVersion}</version>
                 </requireJavaVersion>
                 <requireProperty>
                   <property>java.runtime.name</property>
@@ -1060,7 +1056,7 @@
       <plugin>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok-maven-plugin</artifactId>
-        <version>${lombok.version}.0</version>
+        <version>${lombok-maven-plugin.version}</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
@@ -1186,6 +1182,10 @@
     <install.skipFindbugs>true</install.skipFindbugs>
     <package.attach>false</package.attach>
 
+    <!-- PMD -->
+    <pmd.sourcedir>${basedir}/src/main/pmd</pmd.sourcedir>
+    <pmd.targetdir>${project.build.directory}</pmd.targetdir>
+
     <!-- Versions - Dropwizard -->
     <dropwizard.version>0.6.2</dropwizard.version>
 
@@ -1250,9 +1250,56 @@
     <dcc-resources.version>0.11c</dcc-resources.version>
     <dcc-cghub.version>4</dcc-cghub.version>
 
-    <!-- PMD -->
-    <pmd.sourcedir>${basedir}/src/main/pmd</pmd.sourcedir>
-    <pmd.targetdir>${project.build.directory}</pmd.targetdir>
+    <!-- Versions - Others -->
+    <externalsortinginjava.version>0.1.1</externalsortinginjava.version>
+    <lifecycle-mapping.version>1.0.0</lifecycle-mapping.version>
+    <hadoop-lzo.version>0.4.16</hadoop-lzo.version>
+    <mongo-admin-utils-distribution.version>1.2.0</mongo-admin-utils-distribution.version>
+    <jdk.version>1.8</jdk.version>
+
+    <!-- Versions - Maven Plugins -->
+    <apt-maven-plugin.versionRange>[1.0.6,)</apt-maven-plugin.versionRange>
+
+    <build-helper-maven-plugin.version>1.8</build-helper-maven-plugin.version>
+    <build-helper-maven-plugin.versionRange>[1.0,)</build-helper-maven-plugin.versionRange>
+
+    <cobertura-maven-plugin.version>2.6</cobertura-maven-plugin.version>
+    <exec-maven-plugin.version>1.2.1</exec-maven-plugin.version>
+    <findbugs-maven-plugin.version>3.0.0</findbugs-maven-plugin.version>
+    <jshint-maven-plugin.versionRange>[1.0.0,)</jshint-maven-plugin.versionRange>
+
+    <lombok-maven-plugin.version>${lombok.version}.0</lombok-maven-plugin.version>
+    <lombok-maven-plugin.versionRange>[0.11.2.0,)</lombok-maven-plugin.versionRange>
+
+    <maven-assembly-plugin.version>2.4</maven-assembly-plugin.version>
+    <maven-clean-plugin.version>2.5</maven-clean-plugin.version>
+
+    <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+    <maven-compiler-plugin.source>${jdk.version}</maven-compiler-plugin.source>
+    <maven-compiler-plugin.target>${jdk.version}</maven-compiler-plugin.target>
+
+    <maven-deploy-plugin.version>2.8.1</maven-deploy-plugin.version>
+
+    <maven-enforcer-plugin.version>1.3.1</maven-enforcer-plugin.version>
+    <maven-enforcer-plugin.versionRange>[1.0.0,)</maven-enforcer-plugin.versionRange>
+    <maven-enforcer-plugin.requireMavenVersion>[3.0.3, 3.2.5]</maven-enforcer-plugin.requireMavenVersion>
+    <maven-enforcer-plugin.requireJavaVersion>[1.6.0-26, 1.9)</maven-enforcer-plugin.requireJavaVersion>
+
+    <maven-install-plugin.version>2.5.1</maven-install-plugin.version>
+    <maven-jar-plugin.version>2.4</maven-jar-plugin.version>
+
+    <maven-pmd-plugin.version>3.3</maven-pmd-plugin.version>
+    <maven-pmd-plugin.targetJdk>${jdk.version}</maven-pmd-plugin.targetJdk>
+
+    <maven-release-plugin.version>2.4.2</maven-release-plugin.version>
+    <maven-resources-plugin.version>2.6</maven-resources-plugin.version>
+    <maven-shade-plugin.version>2.3</maven-shade-plugin.version>
+    <maven-site-plugin.version>3.3</maven-site-plugin.version>
+    <maven-source-plugin.version>2.3</maven-source-plugin.version>
+    <maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
+
+    <versions-maven-plugin.version>2.1</versions-maven-plugin.version>
+
   </properties>
 
 </project>
