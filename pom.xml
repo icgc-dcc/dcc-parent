@@ -56,6 +56,10 @@
       <id>dcc-dependencies</id>
       <url>http://seqwaremaven.oicr.on.ca/artifactory/dcc-dependencies</url>
     </repository>
+    <repository>
+      <id>dcc-snapshot</id>
+      <url>http://seqwaremaven.oicr.on.ca/artifactory/dcc-snapshot</url>
+    </repository>
 
     <!-- Spring -->
     <repository>
