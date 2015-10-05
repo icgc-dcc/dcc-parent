@@ -1156,6 +1156,21 @@
               </execution>
             </executions>
           </plugin>
+          <!-- Sign artifacts -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>${maven-pgp-plugin.version}</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
         </plugins>
       </build>
     </profile>
@@ -1301,6 +1316,7 @@
     <maven-site-plugin.version>3.3</maven-site-plugin.version>
     <maven-source-plugin.version>2.3</maven-source-plugin.version>
     <maven-surefire-plugin.version>2.16</maven-surefire-plugin.version>
+    <maven-pgp-plugin.version>1.6</maven-pgp-plugin.version>
 
     <versions-maven-plugin.version>2.1</versions-maven-plugin.version>
 
