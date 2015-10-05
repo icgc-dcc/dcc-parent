@@ -1156,6 +1156,16 @@
               </execution>
             </executions>
           </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>release</id>
+      <properties>
+        <package.attach>true</package.attach>
+      </properties>
+      <build>
+        <plugins>
           <!-- Sign artifacts -->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -1173,12 +1183,6 @@
           </plugin>
         </plugins>
       </build>
-    </profile>
-    <profile>
-      <id>release</id>
-      <properties>
-        <package.attach>true</package.attach>
-      </properties>
     </profile>
   </profiles>
 
