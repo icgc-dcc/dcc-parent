@@ -287,6 +287,11 @@
         <version>${jsr305.version}</version>
       </dependency>
       <dependency>
+        <groupId>com.google.code.findbugs</groupId>
+        <artifactId>annotations</artifactId>
+        <version>${findbugs.version}</version>
+      </dependency>
+      <dependency>
         <groupId>com.google.inject</groupId>
         <artifactId>guice</artifactId>
         <version>${guice.version}</version>
@@ -982,7 +987,7 @@
             <sourceEncoding>utf-8</sourceEncoding>
             <targetJdk>${maven-pmd-plugin.targetJdk}</targetJdk>
             <rulesets>
-              <ruleset>https://seqwaremaven.oicr.on.ca/artifactory/simple/dcc-dependencies/org/icgc/dcc/dcc-pmd/1/dcc-pmd-1-default.xml</ruleset>
+              <ruleset>https://seqwaremaven.oicr.on.ca/artifactory/simple/dcc-dependencies/org/icgc/dcc/dcc-pmd/2/dcc-pmd-2-default.xml</ruleset>
             </rulesets>
             <excludeRoots>
               <excludeRoot>${project.build.directory}/generated-sources/java/</excludeRoot>
@@ -1246,6 +1251,7 @@
     <super.csv.version>2.0.1</super.csv.version>
     <mail.version>1.4.5</mail.version>
     <tika-core.version>1.4</tika-core.version>
+    <findbugs.version>3.0.1</findbugs.version>
 
     <!-- Versions - Cascading -->
     <cascading.version>2.1.6</cascading.version>
@@ -1296,7 +1302,7 @@
 
     <cobertura-maven-plugin.version>2.6</cobertura-maven-plugin.version>
     <exec-maven-plugin.version>1.2.1</exec-maven-plugin.version>
-    <findbugs-maven-plugin.version>3.0.0</findbugs-maven-plugin.version>
+    <findbugs-maven-plugin.version>3.0.1</findbugs-maven-plugin.version>
     <jshint-maven-plugin.versionRange>[1.0.0,)</jshint-maven-plugin.versionRange>
 
     <lombok-maven-plugin.version>${lombok.version}.0</lombok-maven-plugin.version>
