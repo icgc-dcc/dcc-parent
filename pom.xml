@@ -878,7 +878,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>${maven-surefire-plugin.version}</version>
           <configuration>
-            <argLine>-Xms256m -Xmx256m -XX:MaxPermSize=256m</argLine>
+            <argLine>-Xms256m -Xmx256m</argLine>
             <redirectTestOutputToFile>${test.redirectTestOutputToFile}</redirectTestOutputToFile>
             <useFile>${test.useFile}</useFile>
             <systemProperties>
@@ -1128,14 +1128,12 @@
       <properties>
         <test.redirectTestOutputToFile>false</test.redirectTestOutputToFile>
         <test.useFile>false</test.useFile>
-        <enable-code-analysis>true</enable-code-analysis>
       </properties>
     </profile>
     <profile>
       <id>release</id>
       <properties>
         <package.attach>true</package.attach>
-        <enable-code-analysis>true</enable-code-analysis>
       </properties>
       <build>
         <plugins>
@@ -1161,12 +1159,6 @@
     <!-- Profile that enables static code analysis -->
     <profile>
       <id>code-analysis</id>
-      <activation>
-        <property>
-          <name>${enable-code-analysis}</name>
-          <value>true</value>
-        </property>
-      </activation>
       <properties>
         <install.skipFindbugs>false</install.skipFindbugs>
       </properties>
