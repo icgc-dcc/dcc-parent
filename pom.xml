@@ -987,7 +987,7 @@
             <sourceEncoding>utf-8</sourceEncoding>
             <targetJdk>${maven-pmd-plugin.targetJdk}</targetJdk>
             <rulesets>
-              <ruleset>https://seqwaremaven.oicr.on.ca/artifactory/simple/dcc-dependencies/org/icgc/dcc/dcc-pmd/2/dcc-pmd-2.xml</ruleset>
+              <ruleset>https://seqwaremaven.oicr.on.ca/artifactory/simple/dcc-dependencies/org/icgc/dcc/dcc-pmd/3/dcc-pmd-3.xml</ruleset>
             </rulesets>
             <excludeRoots>
               <excludeRoot>${project.build.directory}/generated-sources/java/</excludeRoot>
@@ -1325,7 +1325,7 @@
     <maven-install-plugin.version>2.5.1</maven-install-plugin.version>
     <maven-jar-plugin.version>2.4</maven-jar-plugin.version>
 
-    <maven-pmd-plugin.version>3.3</maven-pmd-plugin.version>
+    <maven-pmd-plugin.version>3.5</maven-pmd-plugin.version>
     <maven-pmd-plugin.targetJdk>${jdk.version}</maven-pmd-plugin.targetJdk>
 
     <maven-release-plugin.version>2.4.2</maven-release-plugin.version>
