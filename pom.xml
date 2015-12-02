@@ -955,6 +955,7 @@
             <skip>${install.skipFindbugs}</skip>
             <xmlOutput>true</xmlOutput>
             <failOnError>false</failOnError>
+            <excludeFilterFile>https://seqwaremaven.oicr.on.ca/artifactory/simple/dcc-dependencies/org/icgc/dcc/dcc-findbugs/1/dcc-findbugs-1.xml</excludeFilterFile>
           </configuration>
           <executions>
             <execution>
