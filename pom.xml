@@ -987,7 +987,7 @@
             <sourceEncoding>utf-8</sourceEncoding>
             <targetJdk>${maven-pmd-plugin.targetJdk}</targetJdk>
             <rulesets>
-              <ruleset>https://seqwaremaven.oicr.on.ca/artifactory/simple/dcc-dependencies/org/icgc/dcc/dcc-pmd/2/dcc-pmd-2-default.xml</ruleset>
+              <ruleset>https://seqwaremaven.oicr.on.ca/artifactory/simple/dcc-dependencies/org/icgc/dcc/dcc-pmd/2/dcc-pmd-2.xml</ruleset>
             </rulesets>
             <excludeRoots>
               <excludeRoot>${project.build.directory}/generated-sources/java/</excludeRoot>
