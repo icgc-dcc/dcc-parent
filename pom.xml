@@ -1128,6 +1128,46 @@
       <properties>
         <test.redirectTestOutputToFile>false</test.redirectTestOutputToFile>
         <test.useFile>false</test.useFile>
+        <enable-code-analysis>true</enable-code-analysis>
+      </properties>
+    </profile>
+    <profile>
+      <id>release</id>
+      <properties>
+        <package.attach>true</package.attach>
+        <enable-code-analysis>true</enable-code-analysis>
+      </properties>
+      <build>
+        <plugins>
+          <!-- Sign artifacts -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>${maven-pgp-plugin.version}</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <!-- Profile that enables static code analysis -->
+    <profile>
+      <id>code-analysis</id>
+      <activation>
+        <property>
+          <name>${enable-code-analysis}</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <properties>
         <install.skipFindbugs>false</install.skipFindbugs>
       </properties>
       <build>
@@ -1153,31 +1193,6 @@
                     </resource>
                   </resources>
                 </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>release</id>
-      <properties>
-        <package.attach>true</package.attach>
-      </properties>
-      <build>
-        <plugins>
-          <!-- Sign artifacts -->
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <version>${maven-pgp-plugin.version}</version>
-            <executions>
-              <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
               </execution>
             </executions>
           </plugin>
