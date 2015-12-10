@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+  <Match>
+    <Or>
+      <Bug pattern="RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE" />
+      <Bug pattern="JLM_JSR166_UTILCONCURRENT_MONITORENTER" />
+      <Bug pattern="SE_NO_SERIALVERSIONID" />
+    </Or>
+  </Match>
+</FindBugsFilter>

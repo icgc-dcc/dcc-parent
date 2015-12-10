@@ -960,7 +960,7 @@
             <skip>${install.skipFindbugs}</skip>
             <xmlOutput>true</xmlOutput>
             <failOnError>false</failOnError>
-            <excludeFilterFile>https://seqwaremaven.oicr.on.ca/artifactory/simple/dcc-dependencies/org/icgc/dcc/dcc-findbugs/1/dcc-findbugs-1.xml</excludeFilterFile>
+            <excludeFilterFile>https://raw.githubusercontent.com/icgc-dcc/dcc-parent/develop/src/main/findbugs/exclude-filter.xml</excludeFilterFile>
           </configuration>
           <executions>
             <execution>
@@ -987,7 +987,7 @@
             <sourceEncoding>utf-8</sourceEncoding>
             <targetJdk>${maven-pmd-plugin.targetJdk}</targetJdk>
             <rulesets>
-              <ruleset>https://seqwaremaven.oicr.on.ca/artifactory/simple/dcc-dependencies/org/icgc/dcc/dcc-pmd/3/dcc-pmd-3.xml</ruleset>
+              <ruleset>https://raw.githubusercontent.com/icgc-dcc/dcc-parent/develop/src/main/pmd/dcc-config.xml</ruleset>
             </rulesets>
             <excludeRoots>
               <excludeRoot>${project.build.directory}/generated-sources/java/</excludeRoot>
