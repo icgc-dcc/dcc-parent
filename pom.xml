@@ -1251,7 +1251,7 @@
     <super.csv.version>2.0.1</super.csv.version>
     <mail.version>1.4.5</mail.version>
     <tika-core.version>1.4</tika-core.version>
-    <findbugs.version>3.0.1</findbugs.version>
+    <findbugs.version>3.0.1u2</findbugs.version>
 
     <!-- Versions - Cascading -->
     <cascading.version>2.1.6</cascading.version>
