@@ -1258,7 +1258,7 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF S
     <jackson-csv.version>2.3.4</jackson-csv.version>
 
     <!-- Versions - Utilities -->
-    <lombok.version>1.16.6</lombok.version>
+    <lombok.version>1.16.8</lombok.version>
     <jcommander.version>1.35</jcommander.version>
     <typesafe-config.version>1.2.0</typesafe-config.version>
     <guice.version>3.0</guice.version>
@@ -1303,7 +1303,6 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF S
 
     <!-- Versions - Resources -->
     <dcc-resources.version>0.11c</dcc-resources.version>
-    <dcc-cghub.version>4</dcc-cghub.version>
 
     <!-- Versions - Others -->
     <externalsortinginjava.version>0.1.1</externalsortinginjava.version>
@@ -1323,8 +1322,11 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF S
     <findbugs-maven-plugin.version>3.0.1</findbugs-maven-plugin.version>
     <jshint-maven-plugin.versionRange>[1.0.0,)</jshint-maven-plugin.versionRange>
 
+    <lombok-maven-plugin.version>1.16.6.1</lombok-maven-plugin.version>
+    <!-- Enable when available!!!
     <lombok-maven-plugin.version>${lombok.version}.0</lombok-maven-plugin.version>
-    <lombok-maven-plugin.versionRange>[0.11.2.0,)</lombok-maven-plugin.versionRange>
+     -->
+    <lombok-maven-plugin.versionRange>[1.16.6.1,)</lombok-maven-plugin.versionRange>
 
     <maven-assembly-plugin.version>2.4</maven-assembly-plugin.version>
     <maven-clean-plugin.version>2.5</maven-clean-plugin.version>
