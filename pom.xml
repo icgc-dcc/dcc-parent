@@ -899,7 +899,7 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF S
           <artifactId>maven-surefire-plugin</artifactId>
           <version>${maven-surefire-plugin.version}</version>
           <configuration>
-            <argLine>-Xms256m -Xmx256m</argLine>
+            <argLine>-Xms256m -Xmx1g</argLine>
             <redirectTestOutputToFile>${test.redirectTestOutputToFile}</redirectTestOutputToFile>
             <useFile>${test.useFile}</useFile>
             <systemProperties>
