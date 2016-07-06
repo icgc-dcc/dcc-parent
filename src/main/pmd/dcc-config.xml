@@ -27,15 +27,14 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF S
   <rule ref="rulesets/java/codesize.xml"/>
   <rule ref="rulesets/java/controversial.xml">
      <exclude name="AtLeastOneConstructor" />
+     <exclude name="OnlyOneReturn" />
   </rule>
   <rule ref="rulesets/java/coupling.xml">
      <exclude name="LawOfDemeter" />
      <exclude name="LoosePackageCoupling" />
   </rule>
   <rule ref="rulesets/java/clone.xml"/>
-  <rule ref="rulesets/java/design.xml">
-     <exclude name="OnlyOneReturn" />
-  </rule>
+  <rule ref="rulesets/java/design.xml" />
   <rule ref="rulesets/java/empty.xml"/>
   <rule ref="rulesets/java/finalizers.xml"/>
   <rule ref="rulesets/java/imports.xml">
